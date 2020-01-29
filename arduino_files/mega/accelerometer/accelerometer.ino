@@ -56,22 +56,6 @@ void loop() {
   gZ = mySensor.gyroZ();
 
   accAngle = atan2(aY, aZ)*RAD_TO_DEG;
-
-// accAngle = atan2(aZ, aY)*RAD_TO_DEG;
-//
-//accAngle += 90;
-
-
-
-//accAngle = -accAngle;/
-//  
-//  if (accAngle > 0)
-//    accAngle -= 180;
-//  else
-//    accAngle += 180;
-
-//  accAngl/e = -accAngle;
-//  accAngle = (abs(accAngle) - 180.0)*/
   
   gyroRate = map(gX, -32768, 32767, -250, 250);
   gyroAngle = (float)gyroRate*sampleTime;  
